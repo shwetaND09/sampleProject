@@ -1,0 +1,23 @@
+
+<div>
+    <b>User Login</b>
+</div>
+
+<div>
+    <form name="loginForm" role="form">
+        <div>
+            <input type="text" name="username"  ng-model="username"  placeholder="User Name" maxlength="100" ng-required="true">
+                                                    
+        </div>
+        <div>
+            <input type="password" name="password"  ng-model="password" placeholder="Password" maxlength="100" ng-required="true">
+                                                    
+                                                   
+        </div>
+        <div>
+             <input type="submit" name="submit"  value="Sign in" ng-disabled="loginForm.$invalid" ng-click="submitLoginForm(loginForm)">   
+        </div>
+    
+    </form>
+    <div><a href="" ng-click="register()"></div>
+</div>

@@ -1,34 +1,86 @@
+<style>
+.headDiv{
+        text-align: center;
+    /* vertical-align: middle; */
+    font-size: 21px;
+    color: darkslategrey;
+    background: darkkhaki;
+    padding: 7px;
+}
+.box-center{
+      margin-top: 5%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}    
+form {
+  border: 3px solid #f1f1f1;
+}
+input[type=text], input[type=password] {
+  width: 250px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* Set a style for all buttons */
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
 
-<div>
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}   
+</style>
+<div class="headDiv">
     <b>Register User</b>
 </div>
+<div class="container box-center">
+        <div class="row">
+            <form name="signUpForm" role="form">
+                <div class="container">
+                  <label for="uname"><b>Username*</b></label><br>
+                  <input type="text" name="username"  ng-model="username"  placeholder="User Name" maxlength="100" ng-required="true">
 
-<div>
-    <form name="signUpForm" role="form">
-        <div>
-            <span>User Name* :</span>
-            <input type="text" name="username"  ng-model="username"  placeholder="User Name" maxlength="100" ng-required="true">
-                                                    
+                </div>
+                <div class="container">  
+                  <label for="psw"><b>Password*</b></label><br>
+                  <input type="password" name="password"  ng-model="password" placeholder="Password" maxlength="100" ng-required="true">
+              
+                </div>
+                 <div class="container">
+                  <label for="fname"><b>First Name*</b></label><br>
+                  <input type="text" name="fname"  ng-model="fname"  placeholder="First Name" maxlength="100" ng-required="true">
+
+                </div>
+                 <div class="container">
+                  <label for="fname"><b>Last Name</b></label><br>
+                  <input type="text" name="fname"  ng-model="fname"  placeholder="Last Name" maxlength="100" ng-required="true">
+
+                </div>
+                <div class="container">
+                 <input type="submit" name="submit" class="button"  value="Save"  ng-disabled="signUpForm.$invalid" ng-click="submitForm(signUpForm)">
+                  
+                </div>               
+              </form>
         </div>
-        <div>
-            <span>Password* :</span>
-            <input type="password" name="password"  ng-model="password" placeholder="Password" maxlength="100" ng-required="true">
-                                                    
-                                                   
-        </div>
-         <div>
-             <span>First Name* :</span>
-            <input type="text" name="fname"  ng-model="fname"  placeholder="First Name" maxlength="100" ng-required="true">
-                                                    
-        </div>
-         <div>
-             <span>Last Name* :</span>
-            <input type="text" name="lname"  ng-model="lname"  placeholder="Last Name" maxlength="100" ng-required="true">
-                                                    
-        </div>
-        <div>
-           
-             <input type="submit" name="submit"  value="Save" ng-disabled="signUpForm.$invalid" ng-click="submitForm(signUpForm)">   
-        </div>
-    </form>
-</div>
+    </div>
